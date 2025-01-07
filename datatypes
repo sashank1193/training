@@ -1,0 +1,19 @@
+Data types:
+1)Dynamic type language:
+two types:
+1)primitive types
+2)non primitive types: objects, arrays
+
+to check the data type -typeof
+
+1)primitive data type: predefined ;we can store single values
+1)numbers: integers, floats 
+2)string: stream of characters enclosed in quotes
+ back ticks introduced in ES6 version
+3)Boolean: true or false
+4)null: empty value or no value
+5)undefined: declared variables with no values
+
+condition: an expression that evaluates the result(true or false)
+condition statement:
+to make the set instructions execute only when the condition is true

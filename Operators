@@ -1,0 +1,41 @@
+Arthematic operations:
++,-,*,/
+multiplication
+division
+modulus operator
+exponential(raised to the power)
+
+Code:
+// alert("danger")
+        // document.write(alert)
+        // a=prompt("Enter your name")
+        // alert(a)
+        // let aa=prompt("Enter your name")
+        // alert(`My name is : ${aa}`)
+        let a1=prompt()
+        document.write(a1,"<br>")
+        document.write(typeof a1,"<br>")
+        let a2=prompt()
+        document.write(a1+ " "+ a2)
+        // let t=40
+        // let r=(t>40)?'Ac-off':'Ac-on'
+        // document.write(r,"<br>")
+        // let a=5
+        // let b="5"
+        // document.write(a>b && a>2,"<br>")
+        // document.write(a>b && a>12,"<br>")
+        // document.write(a>b || a>12,"<br>")
+        // document.write(!(a>12),"<br>")
+        // document.write(a==b,"<br>")
+        // document.write(a!=b,"<br>")
+        // document.write(a===b,"<br>")
+        // document.write(a!==b,"<br>")
+        // a+=40
+        // b-=5
+        // document.write(a,"<br>")
+        // document.write(b,"<br>")
+        // document.write(b,"<br>")
+        // document.write(a*b,"<br>")
+        // document.write(a**b,"<br>")
+        // document.write(a/b,"<br>")
+        // document.write(a%b)        

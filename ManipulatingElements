@@ -1,0 +1,72 @@
+1)Getting an element by id: Returns the element by given id
+Code:
+    <h1 id="a">I am Sai</h1>
+    <h1 id="b">I am Sam</h1>
+    <h1 id="c">I am Ravi</h1>
+    <script>
+        let x=document.getElementById('a')
+        console.log(x)
+    </script>
+
+2)Getting an element by class: Returns all elements having the same class name
+Code:
+    <h1 id="a" class="a">I am Sai</h1>
+    <h1 id="b" class="b">I am Sam</h1>
+    <h1 id="c" class="a">I am Ravi</h1>
+    <h1 id="d" class="a">I am Sashank</h1>
+    <script>
+        let x=document.getElementsByClassName('a')
+        console.log(x)
+
+
+3)Getting an element by tag: This method takes a tag name as a string and return an HTML collection object
+Code:
+    <h1 id="a" class="a">I am Sai</h1>
+    <h1 id="b" class="b">I am Sam</h1>
+    <h1 id="c" class="a">I am Ravi</h1>
+    <h1 id="d" class="a">I am Sashank</h1>
+    <script>
+        let x=document.getElementsByTagName('h1')
+        console.log(x)
+
+4)Getting an element by query selector: The document query selector method select an HTML elements by tag name, by id, class name
+Queryselector: Can be used to select HTML element by its tag name, by id, class name; it selects the first element
+Code:
+    <h1 id="a" class="a">I am Sai</h1>
+    <h1 id="b" class="b">I am Sam</h1>
+    <h1 id="c" class="a">I am Ravi</h1>
+    <h1 id="d" class="a">I am Sashank</h1>
+    <script>
+        let x=document.querySelector('h1')
+        console.log(x)
+QueryselectorALL: It selects all the html elements by its class name and tagname
+Code:
+    <h1 id="a" class="a">I am Sai</h1>
+    <h1 id="b" class="b">I am Sam</h1>
+    <h1 id="c" class="a">I am Ravi</h1>
+    <h1 id="d" class="a">I am Sashank</h1>
+    <script>
+        let x=document.querySelectorAll('h1')
+        console.log(x)
+
+Manipulating Elements:
+To create HTML elements:
+createElement()- create a new element
+method-document.createElement()
+Code:
+        let t=document.createElement('h2')
+        t.className="tt"
+        t.textContent="Hello Ravi"
+        console.log(t)
+        document.body.appendChild(t)
+
+MultipleElements:
+Code:
+        const t=['harshini','mohini','rohini']
+        for(let i=0;i<t.length;i++){
+            let tt=document.createElement('h1')
+            tt.className="a"
+            tt.textContent=t[i]
+            // console.log(t[i])
+            console.log(tt)
+        }

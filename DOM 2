@@ -1,0 +1,63 @@
+DOM:
+1)create a new element(Single,multiple)
+2)append a element inside the parent code
+Add the element at the end
+3)InsertBefore():insert a new node before an existing node or child node of a specific parent code
+
+Code:
+    <div id="a">
+        <h1>Ravi</h1>
+        <h1 id="r">Ram</h1>
+    </div>
+    <div id="b">
+        <h2>Sam</h2>
+        <h2>Venkat</h2>
+    </div>
+    <script>
+        let n=document.createElement("h2")
+        n.innerText="Rahul"
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n ,l)
+        console.log(p)
+        let nn=document.createElement("h1")
+        nn.innerText="Sashank"
+        let pp=document.getElementById('a')
+        let ll=document.getElementById('rr')
+        pp.insertBefore(nn,ll)
+    </script>
+
+To remove an element:
+Code:
+    <div id="a">
+        <h1 id="=re">Ravi</h1>
+        <h1 id>Ram</h1>
+    </div>
+    <div id="b">
+        <h2>Sam</h2>
+        <h2>Venkat</h2>
+    </div>
+    <script>
+        let n=document.getElementById('a')
+        let l=document.getElementById('re')
+        console.log(l)
+        n.removeChild(l)
+    </script>
+
+To replace an element:
+Code:
+    <div id="a">
+        <h1>Ravi</h1>
+        <h1>Ram</h1>
+    </div>
+    <div id="b">
+        <h2>Sam</h2>
+        <h2>Venkat</h2>
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.innerText="Version IT"
+        let p=document.getElementById('a')
+        p.replaceChildren(n)
+        console.log(p)
+    </script>

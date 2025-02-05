@@ -1,0 +1,67 @@
+ReactJS: It is used for user friendly 
+Create Element:
+React.createElement()
+syntax:
+React.createElement()
+Type =tag name;(h, p, div)
+Props= className,id
+
+ReactDOM.createRoot();
+render
+
+JSX:
+Javascript XML is a syntax extension for JS:
+It allows us to write HTML code in React
+
+The JSX code gets compiled into JS
+Babel: A tool converts HTML code in JS
+all the HTML tags must be closed
+
+1)create a class by JSX
+Code:
+     <div id="app"> </div>
+     <script type="text/babel">
+        const element =<h1 className="a">Hello,JSX!</h1>
+        const e=document.getElementById('app')
+        const root=ReactDOM.createRoot(e)
+        root.render(element)
+     </script>
+
+2)create a class without JSX
+Code:
+     <div id="app"></div>
+     <script>
+        const e=React.createElement(
+            'h1',{id:'a'},"I am sai"
+        )
+        const element=document.getElementById('app')
+        const root=ReactDOM.createRoot(element)
+        root.render(e)
+     </script>
+
+3)expressions:
+Code:
+     <div id="app"></div>
+     <script type="text/babel">
+        const n=10;
+        const m=<h1>React is {n*2} times better than React JS</h1>
+        const root=ReactDOM.createRoot(document.getElementById('app'))
+        root.render(m)
+     </script>
+
+4)Conditional Rendering in JSX:
+Code:
+     <div id="app"></div>
+     <script type="text/babel">
+        const App=()=>{
+            const isLoggedIn=true;
+            return(
+                <div>
+                    {isLoggedIn ?(<h1>Welcome Back</h1>):(<h1>please log in</h1>)}
+                    {isLoggedIn && <h2>You have a new notification</h2>}
+                    </div>
+            )
+        }
+        const root=ReactDOM.createRoot(document.getElementById('app'))
+        root.render(<App/>)
+     </script>

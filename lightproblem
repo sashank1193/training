@@ -1,0 +1,56 @@
+Light problem:
+Code:
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .light-bulb{
+            width: 150px;
+        }
+        .button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt="" class="light-bulb" id="bulbImage">
+    <button class="button" id="toggleButton" onclick="toggleLight()">Turn On</button>
+    <script>
+        let isOn=false;
+        function toggleLight(){
+            const body=document.getElementById("body")
+            const bulbIamge=document.getElementById('bulbImage')
+            const toggleButton=document.getElementById('toggleButton')
+            isOn=!isOn;
+            if(isOn){
+                body.style.backgroundColor='lightyellow';
+                bulbImage.src='https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png';
+                toggleButton.innerText="Turn Off";
+            }else{
+                body.style.backgroundColor='black';
+                bulbImage.src='https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png';
+                toggleButton.innerText="Turn On"
+            }
+        }
+    </script>
+
+State:
+State in react:
+In react, state is like a container that holds the data or information for component
+This data can be change over time based on user actions or events
+
+Why state is Important:
+It allows the component to remember things
+Ex: If you click a button to change a color the state will hold the color and show on the screen
+1)Functional components:
+Syntax:
+const[statevariable, setstatefunction,usestate(initialvalue)]
+statevariable: holds the current state
+setstatefunction: a function which is used to update the state
+initialvalue: the initial value of the statevariable when the component first renders

@@ -1,0 +1,55 @@
+React Reducer():
+A reducer is a function that helps to update(like score, a list) based on action we take
+1)Current state: The current value of a state
+2)Action: 
+Example:
+Action: add or remove an item
+State: initial value(3 items) #3 apples
+Tracking apples:
+import React,{act, useReducer} from "react";
+function appleReducer(state=3,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state+1;
+    case 'EAT_APPLE':
+      return state-1;
+    return state;
+  }
+}
+function App(){
+  const[state,dispatch]=useReducer(appleReducer ,3)
+  return(
+    <div style={{padding:'20px'}}>
+      <h1>Apple Counter</h1>
+      <p>Number of apples : {state}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}  style={{
+          backgroundColor:'black',
+          color:'white',
+          padding: '10px 20px',
+          margin: '10px',
+          border: 'none',
+          borderRadius: '20px',
+          cursor: 'pointer',
+        }}>ADD APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}  style={{
+          backgroundColor:'black',
+          color:'white',
+          padding: '10px 20px',
+          margin: '10px',
+          border: 'none',
+          borderRadius: '20px',
+          cursor: 'pointer',
+        }}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;
+
+
+Callback in React:
+in react a call back is function that is passed as an argument to another function
+call backs are often to communicate with different components
+Ex: A parent component passing as Callback to a child
+parent component display a message and child component has a button
+When the button is clicked the child will use callback
+and tells the parent component to update the msg

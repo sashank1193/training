@@ -1,0 +1,82 @@
+Grid:
+Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .parent{
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 15% 70% 15%;
+            grid-template-columns: 15% 70% 15%;
+            
+
+        }
+        .header{
+            display: flex;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }
+        .aside{
+            display: flex;
+            background-color: blue;
+            grid-row: 2/3;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1/2;
+        }
+        .main{
+            display: flex;
+            background-color: green;
+            grid-row: 2/3;
+            grid-column: 2/3;
+            justify-content: center;
+            align-items: center;
+        }
+        .rightmenu{
+            display: flex;
+            background-color: orange;
+            grid-row: 2/3;
+            grid-column: 3/4;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer{
+            display: flex;
+            background-color: yellow;
+            grid-row: 3/4;
+            grid-column: 1/4;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">Header</div>
+        <div class="aside">Aside</div>
+        <div class="main">Main</div>
+        <div class="rightmenu">RightMenu</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
+
+Flex						                                        Grid
+flex is one directional				                          grid is two directional
+flex is flexible and easy to work		                    complex but very useful
+in flex we have only limited tools		                  in grid we have advanced tools
+flex is bydefault a responsive webpage		              we can make grid responsive using some tools
+
+
+display:grid; -- it defines the grid container
+grid-template-rows -- it specifies how many rows it contains and how much space each row occupies
+grid-template-columns -- it specifies how many columns it contains and how much space each columns occupies
+grid-row -- it specifies the start and end of particular row
+grid column -- it specifies the start and end of particular column
